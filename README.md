@@ -21,4 +21,5 @@
 19. views/I18n --- Vue i18n前端国际化
 20. views/editTable --- element ui 的可编辑表格
 21. views/upload --- element ui 的上传组件
+22. views/表单验证 --- element ui 使用v-for生成的el-form-item的表单验证
 

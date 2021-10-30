@@ -740,9 +740,9 @@ export default {
       setStroage("test", "abcd");
       console.log(2);
     },
+    components: {},
   },
-  components: {},
-};
+}
 </script>
 
 <style>

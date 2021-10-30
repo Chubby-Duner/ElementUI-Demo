@@ -126,6 +126,11 @@ const routes = [
     component: () => import('../views/editTable/index.vue')
   },
   {
+    path: '/validator',
+    name: 'Validator',
+    component: () => import('../views/表单验证.vue')
+  },
+  {
     path: '*',
     component: () => import('../components/page404/index.vue')
   }

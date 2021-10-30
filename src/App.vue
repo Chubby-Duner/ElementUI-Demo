@@ -21,7 +21,8 @@
       <router-link to="/eltransfer">ElTransfer</router-link> |
       <router-link to="/i18n">i18n</router-link> |
       <router-link to="/upload">upload</router-link> |
-      <router-link to="/editTable">editTable</router-link>
+      <router-link to="/editTable">editTable</router-link> |
+      <router-link to="/validator">validator</router-link>
     </div>
     <!-- <Home @getNum="getSonNum">getNum</Home> -->
     <!-- <tabs></tabs> -->
