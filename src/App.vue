@@ -22,7 +22,9 @@
       <router-link to="/i18n">i18n</router-link> |
       <router-link to="/upload">upload</router-link> |
       <router-link to="/editTable">editTable</router-link> |
-      <router-link to="/validator">validator</router-link>
+      <router-link to="/validator">validator</router-link> |
+      <router-link to="/treeTable">treeTable</router-link> |
+      <router-link to="/generateJSON">generateJSON</router-link>
     </div>
     <!-- <Home @getNum="getSonNum">getNum</Home> -->
     <!-- <tabs></tabs> -->

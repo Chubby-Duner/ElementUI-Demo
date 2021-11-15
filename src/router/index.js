@@ -131,6 +131,16 @@ const routes = [
     component: () => import('../views/表单验证.vue')
   },
   {
+    path: '/treeTable',
+    name: 'TreeTable',
+    component: () => import('../views/treeTable.vue')
+  },
+  {
+    path: '/generateJSON',
+    name: 'GenerateJSON',
+    component: () => import('../views/generateJSON.vue')
+  },
+  {
     path: '*',
     component: () => import('../components/page404/index.vue')
   }
