@@ -24,8 +24,25 @@
       <router-link to="/editTable">editTable</router-link> |
       <router-link to="/validator">validator</router-link> |
       <router-link to="/treeTable">treeTable</router-link> |
-      <router-link to="/generateJSON">generateJSON</router-link>
+      <router-link to="/generateJSON">generateJSON</router-link> |
+      <router-link to="/dragDialog">drag-dialog</router-link> |
+      <router-link to="/todo">todo</router-link> |
+      <router-link to="/backToTop">BackToTop</router-link> |
+      <router-link to="/clipboard">Clipboard</router-link> |
+      <router-link to="/packageElTable">PackageElTable</router-link> |
+      <router-link to="/trsTable">TrsTable</router-link> |
+      <router-link to="/reWriteMessage">reWriteMessage</router-link> |
+      <router-link to="/sortTable">sortTable</router-link>
     </div>
+    <!-- <div>
+      <button @click="push">跳转</button>
+    </div>
+    <div>
+      <span>test split</span>
+      <div v-html="formatterColumn(msg)"></div>
+    </div>
+
+    <button @click="testEvent($event)" name="哈哈">单击</button> -->
     <!-- <Home @getNum="getSonNum">getNum</Home> -->
     <!-- <tabs></tabs> -->
     <!-- <div style="background-color: red; margin-top: 20px">{{ sumHandle }}</div> -->
@@ -49,6 +66,7 @@ export default {
     return {
       parantData: "",
       props: "abcd",
+      msg: 'abc<br>007'
     };
   },
   computed: {
@@ -65,6 +83,36 @@ export default {
       // this.
     },
     asyncClick() {},
+    // 测试连续跳转同一路由  (会报错，不能这样写)  
+    push() {
+      let arr = [{id: 111, value: 'a'}, {id: 123, value: 'b'}]
+      let i = 0
+      const timer = setInterval(() => {
+        if (i < arr.length) {
+          const singleObj = arr[i]
+          const params = {
+            id: singleObj.id,
+            name: singleObj.value
+          }
+
+          this.$router.push({ name: 'Form' , params: { routerParams: params }})
+          i++
+        } else {
+          window.clearInterval(timer)
+        }
+      }, 200)
+    },
+    formatterColumn(val) {
+      if (val === undefined || val === null) {
+        return ''
+      } else {
+        const status = val.split('<br>')
+        return status[status.length - 1]
+      }
+    },
+    testEvent(e) {
+      console.log(e)
+    }
   },
   components: {
     // Home,

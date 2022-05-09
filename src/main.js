@@ -16,14 +16,18 @@ Vue.use(VCharts);
 
 
 // 引入tainwind css
-// import "tailwindcss/tailwind.css"
+// import "tailwindcss/tailwind.css" 
 import "./index.css"
 
 import {
   checkArray
 } from './common/js/array'
 
+
+// 引入重写后的message提示
+import message from './utils/reWriteMessage.js'
 Vue.use(ElementUI);
+Vue.prototype.$message = message
 
 import {
   DatePicker
@@ -43,7 +47,6 @@ Vue.config.productionTip = false;
 */
 
 // 自定义指令directive
-
 Vue.directive("permission", {
   inserted(el, binding) {
 
@@ -73,6 +76,14 @@ Vue.directive("permission", {
     }
   }
 });
+
+// 引入directives.js全局注册的自定义指令
+import Directives from './utils/directives'
+Vue.use(Directives)
+
+// vue-clipboard2
+import VueClipboard from 'vue-clipboard2'
+Vue.use(VueClipboard)
 
 new Vue({
   router,

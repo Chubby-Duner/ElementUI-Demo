@@ -4,8 +4,10 @@
       ref="upload"
       :auto-upload="false"
       action=""
-      :file-list="file"
+      :file-list="fileList"
       :on-change="fileChange"
+      :on-remove="fileRemove"
+      multiple
       accept=".xls,.xlsx"
       size="small"
       style="display: inline-block; margin-top: 10px"
@@ -14,6 +16,7 @@
         ><i class="el-icon-upload"></i>选择文件</el-button
       >
     </el-upload>
+    <p style="font-weight: bold;">总上传文件数：{{ fileList.length }}</p>
   </div>
 </template>
 
@@ -47,7 +50,10 @@ export default {
       }
       console.log(file, fileList);
     },
-
+    //检测文件删除
+    fileRemove(file, fileList) {
+        this.fileList = fileList;
+    },
     // 模拟上传请求
     submitUpload() {
        if (this.fileList.length === 0) {
@@ -67,11 +73,11 @@ export default {
           ],
 
         */
-        
+        console.log(this.adFileList, 'this.this.adFileList');
         // 请求操作
         const formData = new FormData();
         this.adFileList.forEach((e) => {
-          formData.append("file", e.raw);
+          formData.append("file", e.raw);  // 文件流
         });
         // api(formData).then(() => {
         //   // ...
@@ -84,5 +90,9 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
+/* 多个上传更改el-upload显示文件列表，只展示前5个 */
+.el-upload-list .el-upload-list__item:nth-child(n+6) {
+    display: none !important;
+}
 </style>

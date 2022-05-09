@@ -24,4 +24,6 @@
 22. views/表单验证 --- element ui 使用v-for生成的el-form-item的表单验证
 23. views/treeTable --- el-table的树形结构懒加载的测试
 24. views/generateJSON --- 实现的功能是新增一条数据，减少一条数据。eg: 页面进行操作然后生成对应的JSON
+25. views/dragDialog --- 实现el-dialog的拖拽
+26. views/clipboard  --- vue-clipboard2 复制功能
 

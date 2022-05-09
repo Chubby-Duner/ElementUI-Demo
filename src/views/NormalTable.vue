@@ -5,17 +5,7 @@
     <el-table-column prop="address" label="地址"> </el-table-column>
     <el-table-column label="订单状态" width="110" align="center">
       <template slot-scope="{ row }">
-        <el-tag :type="row.status | statusFilter">{{
-          row.status === 0
-            ? "未结单"
-            : row.status === 1
-            ? "正常结单"
-            : row.status === 2
-            ? "异常结单"
-            : row.status === 3
-            ? "废弃"
-            : "无状态"
-        }}</el-tag>
+        <el-tag :type="row.status | statusTypeFilter">{{ row.status | statusTextFilter }}</el-tag>
       </template>
     </el-table-column>
   </el-table>
@@ -25,7 +15,7 @@
 export default {
   // 过滤器动态设置状态
   filters: {
-    statusFilter(status) {
+    statusTypeFilter(status) {
       const statusMap = {
         0: { type: "success", value: "未结单" },
         1: { type: "info", value: "正常结单" },
@@ -35,6 +25,17 @@ export default {
       return statusMap[status].type;
       // return map.filter(v=>v.status === status).value
     },
+    statusTextFilter(status) {
+      return status === 0
+        ? "未结单"
+        : status === 1
+        ? "正常结单"
+        : status === 2
+        ? "异常结单"
+        : status === 3
+        ? "废弃"
+        : "无状态"
+    }
   },
   data() {
     return {

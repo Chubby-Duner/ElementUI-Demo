@@ -141,6 +141,46 @@ const routes = [
     component: () => import('../views/generateJSON.vue')
   },
   {
+    path: '/dragDialog',
+    name: 'DragDialog',
+    component: () => import('../views/dragDialog.vue')
+  },
+  {
+    path: '/todo',
+    name: 'Todo',
+    component: () => import('../views/todoList/index.vue')
+  },
+  {
+    path: '/backToTop',
+    name: 'BackToTop',
+    component: () => import('../views/backToTop/index.vue')
+  },
+  {
+    path: '/clipboard',
+    name: 'Clipboard',
+    component: () => import('../views/clipboard.vue')
+  },
+  {
+    path: '/packageElTable',
+    name: 'PackageElTable',
+    component: () => import('../views/packageEleTable/Table.vue')
+  },
+  {
+    path: '/trsTable',
+    name: 'TrsTable',
+    component: () => import('../views/packageEleTable/TrsTable.vue')
+  },
+  {
+    path: '/reWriteMessage',
+    name: 'reWriteMessage',
+    component: () => import('../views/reWriteMessage.vue')
+  },
+  {
+    path: '/sortTable',
+    name: 'sortTable',
+    component: () => import('../views/sortTable.vue')
+  },
+  {
     path: '*',
     component: () => import('../components/page404/index.vue')
   }

@@ -103,6 +103,13 @@
     <div v-for="(item, index) in reason" :key="index">
       <span v-if="item.value !== ''"> {{ item.label }}</span>
     </div>
+
+    <br>
+    <br>  
+    <br>
+    <div v-for="(item,index) in colunms.test" :key="index">
+      {{item.label}}---{{testObj[item.key]}}
+    </div>
   </div>
 </template>
 
@@ -540,6 +547,705 @@ export default {
           label: '失败'
         }
       ],
+      summary: {
+        Aliexpress: [
+          {
+            label: '(未去佣)销售总额',
+            key: 'orderTotal'
+          },
+          {
+            label: '实际成交总额',
+            key: 'actualOrderTotal'
+          },
+          {
+            label: '退款总额',
+            key: 'refundTotal'
+          },
+          {
+            label: '刷单费用',
+            key: 'clickFarmingCost'
+          },
+          {
+            label: '总退款率',
+            key: 'refundRatio' // *100 keepTwoNum%
+          },
+          {
+            label: '广告销售总额',
+            key: 'Ad_Sale'
+          },
+          {
+            label: '广告花费总额',
+            key: 'adCost' 
+          },
+          {
+            label: '总花费成交比',
+            key: 'adCostRatio' //  * 100 keepTwoNum%
+          },
+          {
+            label: '总利润',
+            key: 'Profit' 
+          },
+          {
+            label: '总利润率',
+            key: 'shopProfitRatio' //  * 100 keepTwoNum%
+          },
+          {
+            label: '实际总利润',
+            key: 'actualProfit' 
+          },
+          {
+            label: '实际利润率',
+            key: 'actualProfitRatio' //  * 100 keepTwoNum%
+          }
+        ],
+        Allegro: [
+          {
+            label: '(未去佣)销售总额',
+            key: 'orderTotal'
+          },
+          {
+            label: '实际成交总额',
+            key: 'actualOrderTotal'
+          },
+          {
+            label: '退款总额',
+            key: 'refundTotal'
+          },
+          {
+            label: '总退款率',
+            key: 'refundRatio' // *100 keepTwoNum%
+          },
+          {
+            label: '清货销售额',
+            key: 'clearanceTotal'
+          },
+          {
+            label: '佣金',
+            key: 'commissionFee'  // keepTwoNum
+          },
+          {
+            label: '货物成本',
+            key: 'purchaseCost'  // keepTwoNum
+          },
+          {
+            label: '运费成本',
+            key: 'shipping'  // keepTwoNum
+          },
+          {
+            label: '退款成本',
+            key: 'refundCost'  // keepTwoNum
+          },
+          {
+            label: '包装成本',
+            key: 'packageFee'  // keepTwoNum
+          },
+          {
+            label: '人工处理费',
+            key: 'manualProcessFee'  // keepTwoNum
+          },
+          {
+            label: '总利润率',
+            key: 'shopProfitRatio' //  * 100 keepTwoNum%
+          },
+          {
+            label: '实际总利润',
+            key: 'actualProfit' 
+          },
+          {
+            label: '实际利润率',
+            key: 'actualProfitRatio' //  * 100 keepTwoNum%
+          }
+        ],
+        Amazon: [
+          {
+            label: '(未去佣)销售总额',
+            key: 'orderTotal'
+          },
+          {
+            label: '实际成交总额',
+            key: 'actualOrderTotal'
+          },
+          {
+            label: '退款总额',
+            key: 'refundTotal'
+          },
+          {
+            label: '刷单费用',
+            key: 'clickFarmingCost'
+          },
+          {
+            label: '总退款率',
+            key: 'refundRatio' // *100 keepTwoNum%
+          },
+          {
+            label: '清货销售额',
+            key: 'clearanceTotal'
+          },
+          {
+            label: '广告销售总额',
+            key: 'adSale'
+          },
+          {
+            label: '广告花费总额',
+            key: 'adCost' 
+          },
+          {
+            label: '货物成本',
+            key: 'purchaseCost'  // keepTwoNum
+          },
+          {
+            label: '运费成本',
+            key: 'shipping'  // keepTwoNum
+          },
+          {
+            label: '退款成本',
+            key: 'refundCost'  // keepTwoNum
+          },
+          {
+            label: '包装成本',
+            key: 'packageFee'  // keepTwoNum
+          },
+          {
+            label: '人工处理费',
+            key: 'manualProcessFee'  // keepTwoNum
+          },
+          {
+            label: '维护业绩',
+            key: 'maintainOrderTotal'  
+          },
+          {
+            label: '维护利润',
+            key: 'maintainProfit'  
+          },
+          {
+            label: '总花费成交比',
+            key: 'adCostRatio' //  * 100 keepTwoNum%
+          },
+          {
+            label: '总利润',
+            key: 'shopProfit' 
+          },
+          {
+            label: '总利润率',
+            key: 'shopProfitRatio' //  * 100 keepTwoNum%
+          },
+          {
+            label: '实际总利润',
+            key: 'actualProfit' 
+          },
+          {
+            label: '实际利润率',
+            key: 'actualProfitRatio' //  * 100 keepTwoNum%
+          }
+        ],
+        B2w: [
+          {
+            label: '(未去佣)销售总额',
+            key: 'orderTotal'
+          },
+          {
+            label: '实际成交总额',
+            key: 'actualOrderTotal'
+          },
+          {
+            label: '退款总额',
+            key: 'refundTotal'
+          },
+          {
+            label: '总退款率',
+            key: 'refundRatio' // *100 keepTwoNum%
+          },
+          {
+            label: '清货销售额',
+            key: 'clearanceTotal'
+          },
+          {
+            label: '广告销售总额',
+            key: 'adSale'
+          },
+          {
+            label: '广告花费总额',
+            key: 'adCost' 
+          },
+          {
+            label: '佣金',
+            key: 'commissionFee'  // <0 ==> *-1
+          },
+          {
+            label: '退款佣金',
+            key: 'refundCommission'  // keepTwoNum
+          },
+          {
+            label: '货物成本',
+            key: 'purchaseCost'  // keepTwoNum
+          },
+          {
+            label: '运费成本',
+            key: 'shippingCost'  // keepTwoNum
+          },
+          {
+            label: '退款成本',
+            key: 'refundCost'  // keepTwoNum
+          },
+          {
+            label: '包装成本',
+            key: 'packageFee'  // keepTwoNum
+          },
+          {
+            label: '人工处理费',
+            key: 'manualProcessFee'  // keepTwoNum
+          },
+          {
+            label: '包装材料费',
+            key: 'packageFee'  // keepTwoNum
+          },
+          {
+            label: '维护业绩',
+            key: 'maintainOrderTotal'  // keepTwoNum
+          },
+          {
+            label: '维护利润',
+            key: 'maintainProfit'  // keepTwoNum
+          },
+          {
+            label: '店铺利润',
+            key: 'shopProfit'  // keepTwoNum
+          },
+          {
+            label: '总花费成交比',
+            key: 'adCostRatio' //  * 100 keepTwoNum%
+          },
+          {
+            label: '总利润',
+            key: 'shopProfit' 
+          },
+          {
+            label: '总利润率',
+            key: 'shopProfitRatio' //  * 100 keepTwoNum%
+          },
+          {
+            label: '实际总利润',
+            key: 'actualProfit' 
+          },
+        ],
+        Joom: [
+          {
+            label : '(去佣)销售总额',
+            key: 'orderTotal'
+          },
+          {
+            label: '实际成交总额',
+            key: 'actualOrderTotal'
+          },
+          {
+            label: '退款总额',
+            key: 'refundTotal'
+          },
+          {
+            label: '总退款率',
+            key: 'refundRatio' // *100 keepTwoNum%
+          },
+          {
+            label: '广告销售总额',
+            key: 'Ad_Sale' // 没有字段  为0
+          },
+          {
+            label: '广告花费总额',
+            key: 'adCost' 
+          },
+          {
+            label: '总花费成交比',
+            key: 'adCostRatio' //  * 100 keepTwoNum%
+          },
+          {
+            label: '货物成本',
+            key: 'purchaseCost'  // keepTwoNum
+          },
+          {
+            label: '运费成本',
+            key: 'shipping'  // keepTwoNum
+          },
+          {
+            label: '退款成本',
+            key: 'refundCost'  // keepTwoNum
+          },
+          {
+            label: '包装成本',
+            key: 'packageFee'  // keepTwoNum
+          },
+          {
+            label: '人工处理费',
+            key: 'manualProcessFee'  // keepTwoNum
+          },
+          {
+            label: '总花费成交比',
+            key: 'adCostRatio' //  * 100 keepTwoNum%
+          },
+          {
+            label: '总利润率',
+            key: 'shopProfitRatio' //  * 100 keepTwoNum%
+          },
+          {
+            label: '实际总利润',
+            key: 'actualProfit' 
+          },
+          {
+            label: '实际利润率',
+            key: 'actualProfitRatio' //  * 100 keepTwoNum%
+          }
+        ],
+        Lazada: [
+          {
+            label: '(未去佣)销售总额',
+            key: 'orderTotal'
+          },
+          {
+            label: '实际成交总额',
+            key: 'actualOrderTotal'
+          },
+          {
+            label: '退款总额',
+            key: 'refundTotal'
+          },
+          {
+            label: '总退款率',
+            key: 'refundRatio' // *100 keepTwoNum%
+          },
+          {
+            label: '佣金',
+            key: 'commissionFee'  // keepTwoNum
+          },
+          {
+            label: '货物成本',
+            key: 'purchaseCost'  // keepTwoNum
+          },
+          {
+            label: '运费成本',
+            key: 'shipping'  // keepTwoNum
+          },
+          {
+            label: '退款成本',
+            key: 'refundCost'  // keepTwoNum
+          },
+          {
+            label: '包装成本',
+            key: 'packageFee'  // keepTwoNum
+          },
+          {
+            label: '人工处理费',
+            key: 'manualProcessFee'  // keepTwoNum
+          },
+          {
+            label: '总利润率',
+            key: 'shopProfitRatio' //  * 100 keepTwoNum%
+          },
+          {
+            label: '实际总利润',
+            key: 'actualProfit' 
+          },
+          {
+            label: '实际利润率',
+            key: 'actualProfitRatio' //  * 100 keepTwoNum%
+          }
+        ],
+        Mall: [
+           {
+            label: '(未去佣)销售总额',
+            key: 'orderTotal'
+          },
+          {
+            label: '实际成交总额',
+            key: 'actualOrderTotal'
+          },
+          {
+            label: '退款总额',
+            key: 'refundTotal'
+          },
+          {
+            label: '总退款率',
+            key: 'refundRatio' // *100 keepTwoNum%
+          },
+          {
+            label: '广告销售总额',
+            key: 'Ad_Sale'
+          },
+          {
+            label: '广告花费总额',
+            key: 'adCost' 
+          },
+          {
+            label: '总花费成交比',
+            key: 'adCostRatio' //  * 100 keepTwoNum%
+          },
+          {
+            label: '总利润',
+            key: 'Profit' 
+          },
+          // all
+          {
+            label: '总利润率',
+            key: 'shopProfitRatio' //  * 100 keepTwoNum%
+          },
+          {
+            label: '实际总利润',
+            key: 'actualProfit' 
+          },
+          {
+            label: '实际利润率',
+            key: 'actualProfitRatio' //  * 100 keepTwoNum%
+          }
+        ],
+        Mercado: [
+           {
+            label: '(未去佣)销售总额',
+            key: 'orderTotal'
+          },
+          {
+            label: '实际成交总额',
+            key: 'actualOrderTotal'
+          },
+          {
+            label: '退款总额',
+            key: 'refundTotal'
+          },
+          {
+            label: '总退款率',
+            key: 'refundRatio' // *100 keepTwoNum%
+          },
+          {
+            label: '清货销售额',
+            key: 'clearanceTotal'
+          },
+          {
+            label: '佣金',
+            key: 'commissionFee'  // keepTwoNum
+          },
+          {
+            label: '货物成本',
+            key: 'purchaseCost'  // keepTwoNum
+          },
+          {
+            label: '运费成本',
+            key: 'shipping'  // keepTwoNum
+          },
+          {
+            label: '退款成本',
+            key: 'refundCost'  // keepTwoNum
+          },
+          {
+            label: '包装成本',
+            key: 'packageFee'  // keepTwoNum
+          },
+          {
+            label: '人工处理费',
+            key: 'manualProcessFee'  // keepTwoNum
+          },
+          {
+            label: '总利润',
+            key: 'Profit' 
+          },
+          // all
+          {
+            label: '总利润率',
+            key: 'shopProfitRatio' //  * 100 keepTwoNum%
+          },
+          {
+            label: '实际总利润',
+            key: 'actualProfit' 
+          },
+          {
+            label: '实际利润率',
+            key: 'actualProfitRatio' //  * 100 keepTwoNum%
+          }
+        ],
+        Shopee: [
+                     {
+            label: '(未去佣)销售总额',
+            key: 'orderTotal'
+          },
+          {
+            label: '实际成交总额',
+            key: 'actualOrderTotal'
+          },
+          {
+            label: '退款总额',
+            key: 'refundTotal'
+          },
+          {
+            label: '总退款率',
+            key: 'refundRatio' // *100 keepTwoNum%
+          },
+          {
+            label: '广告销售总额',
+            key: 'Ad_Sale'
+          },
+          {
+            label: '广告花费总额',
+            key: 'adCost' 
+          },
+          {
+            label: '总花费成交比',
+            key: 'adCostRatio' //  * 100 keepTwoNum%
+          },
+          // all
+          {
+            label: '总利润率',
+            key: 'shopProfitRatio' //  * 100 keepTwoNum%
+          },
+          {
+            label: '实际总利润',
+            key: 'actualProfit' 
+          },
+          {
+            label: '实际利润率',
+            key: 'actualProfitRatio' //  * 100 keepTwoNum%
+          }
+        ],
+        Walmart: [
+          {
+            label: '(未去佣)销售总额',
+            key: 'orderTotal'
+          },
+          {
+            label: '实际成交总额',
+            key: 'actualOrderTotal'
+          },
+          {
+            label: '退款总额',
+            key: 'refundTotal'
+          },
+          {
+            label: '总退款率',
+            key: 'refundRatio' // *100 keepTwoNum%
+          },
+          {
+            label: '广告销售总额',
+            key: 'adSale'
+          },
+          {
+            label: '广告花费总额',
+            key: 'adCost' 
+          },
+          {
+            label: '佣金',
+            key: 'commissionFee'  // <0 ==> *-1
+          },
+          {
+            label: '退款佣金',
+            key: 'refundCommission'  // keepTwoNum
+          },
+          {
+            label: '货物成本',
+            key: 'purchaseCost'  // keepTwoNum
+          },
+          {
+            label: '运费成本',
+            key: 'shippingCost'  // keepTwoNum
+          },
+          {
+            label: '退款成本',
+            key: 'refundCost'  // keepTwoNum
+          },
+          {
+            label: '包装成本',
+            key: 'packageFee'  // keepTwoNum
+          },
+          {
+            label: '人工处理费',
+            key: 'manualProcessFee'  // keepTwoNum
+          },
+          {
+            label: '包装材料费',
+            key: 'packageFee'  // keepTwoNum
+          },
+          {
+            label: '维护业绩',
+            key: 'maintainOrderTotal'  // keepTwoNum
+          },
+          {
+            label: '维护利润',
+            key: 'maintainProfit'  // keepTwoNum
+          },
+          {
+            label: '店铺利润',
+            key: 'shopProfit'  // keepTwoNum
+          },
+          {
+            label: '总花费成交比',
+            key: 'adCostRatio' //  * 100 keepTwoNum%
+          },
+          {
+            label: '总利润率',
+            key: 'shopProfitRatio' //  * 100 keepTwoNum%
+          },
+          {
+            label: '实际总利润',
+            key: 'actualProfit' 
+          },
+          {
+            label: '实际利润率',
+            key: 'actualProfitRatio' //  * 100 keepTwoNum%
+          }
+        ],
+        Wish: [
+          {
+            label: '(去佣)销售总额',
+            key: 'orderTotal'
+          },
+          {
+            label: '实际成交总额',
+            key: 'actualOrderTotal'
+          },
+          {
+            label: '退款总额',
+            key: 'refundTotal'
+          },
+          {
+            label: '总退款率',
+            key: 'refundRatio' // *100 keepTwoNum%
+          },
+          {
+            label: '清货销售额',
+            key: 'clearanceTotal'
+          },
+          {
+            label: '广告销售总额',
+            key: 'adSale'
+          },
+          {
+            label: '广告花费总额',
+            key: 'adCost' 
+          },
+          {
+            label: '低利润订单总额',
+            key: 'lostProfitOrderTotal' //  * 100 keepTwoNum%
+          },
+          {
+            label: '低利润订单货物成本',
+            key: 'purchaseCost' //  * 100 keepTwoNum%
+          },
+          {
+            label: '低利润订单运费成本',
+            key: 'shippingFee' //  * 100 keepTwoNum%
+          },
+          {
+            label: '低利润订单包装成本',
+            key: 'packageFee' //  * 100 keepTwoNum%
+          },
+          {
+            label: '低利润订单人工处理费',
+            key: 'processingFee' //  * 100 keepTwoNum%
+          },
+          {
+            label: '总花费成交比',
+            key: 'adCostRatio' //  * 100 keepTwoNum%
+          },
+        ]
+      },
+      testObj: {
+        orderTotal: 1,
+        actualOrderTotal: 2
+      }
     };
   },
   directives: {
