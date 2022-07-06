@@ -3,7 +3,6 @@
     <!-- <template v-for="(column,index) in columns2">
         <vxe-checkbox v-model="column.visible" :key="index" @change="$refs.xTable.refreshColumn()">{{ column.title }}</vxe-checkbox>
     </template> -->
-    <div>123</div>
 
     <!-- 切换平台刷新列，然后自定义配置也会自动更新 -->
     <vxe-toolbar ref="xToolbar" :custom="{ immediate: true, isFooter: false }">
