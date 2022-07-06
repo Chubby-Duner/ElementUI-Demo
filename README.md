@@ -30,4 +30,3 @@
 28. views/TrsTable --- 封装el-table
 29. views/reWriteMessage --- 改写el-message(utils/reWriteMessage.js，main.js中引用)
 30. views/vxeTable --- vxeTable
-11
