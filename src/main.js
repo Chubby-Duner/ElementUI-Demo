@@ -13,6 +13,13 @@ import i18n from './i18n/i18n'
 
 Vue.use(VCharts);
 
+// 引入vxe-table
+import 'xe-utils'
+import VXETable from 'vxe-table'
+import 'vxe-table/lib/style.css'
+
+Vue.use(VXETable)
+
 
 
 // 引入tainwind css

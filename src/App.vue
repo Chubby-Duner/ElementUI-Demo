@@ -32,7 +32,9 @@
       <router-link to="/packageElTable">PackageElTable</router-link> |
       <router-link to="/trsTable">TrsTable</router-link> |
       <router-link to="/reWriteMessage">reWriteMessage</router-link> |
-      <router-link to="/sortTable">sortTable</router-link>
+      <router-link to="/sortTable">sortTable</router-link> |
+      <router-link to="/exportExcel">exportExcel</router-link> |
+      <router-link to="/vxeTable">vxeTable</router-link>
     </div>
     <!-- <div>
       <button @click="push">跳转</button>

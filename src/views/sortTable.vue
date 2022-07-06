@@ -1,27 +1,31 @@
 <template>
-    <el-table
-      :data="tableData"
-      ref="sortTable"
-      style="width: 100%">
-      <el-table-column
-        prop="date"
-        label="日期"
-        width="180">
-      </el-table-column>
-      <el-table-column
-        prop="name"
-        label="姓名"
-        width="180">
-      </el-table-column>
-      <el-table-column
-        prop="address"
-        label="地址">
-      </el-table-column>
-    </el-table>
+    <div>
+        <el-table
+        :data="tableData"
+        ref="sortTable"
+        style="width: 100%">
+        <el-table-column
+            prop="date"
+            label="日期"
+            width="180">
+        </el-table-column>
+        <el-table-column
+            prop="name"
+            label="姓名"
+            width="180">
+        </el-table-column>
+        <el-table-column
+            prop="address"
+            label="地址">
+        </el-table-column>
+        </el-table>
+        <el-button @click="send">send</el-button>
+    </div>
 </template>
 
 <script>
 import Sortable from 'sortablejs'
+import bus from '@/utils/eventBus'
 
 export default {
     data() {
@@ -43,7 +47,8 @@ export default {
             name: '王小虎',
             address: '上海市普陀区金沙江路 1516 弄'
             }],
-            sortTable: null
+            sortTable: null,
+            busText: '测试EventBus成功'
         }
     },
     mounted() {
@@ -52,6 +57,9 @@ export default {
         });
     },
     methods: {
+        send() {
+            bus.$emit('share', this.busText)
+        },
         setSort() {
             const el = this.$refs.sortTable.$el.querySelectorAll(
                 '.el-table__body-wrapper > table > tbody'

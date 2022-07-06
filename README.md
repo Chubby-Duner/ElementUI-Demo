@@ -26,4 +26,7 @@
 24. views/generateJSON --- 实现的功能是新增一条数据，减少一条数据。eg: 页面进行操作然后生成对应的JSON
 25. views/dragDialog --- 实现el-dialog的拖拽
 26. views/clipboard  --- vue-clipboard2 复制功能
-
+27. views/PackageElTable --- 封装el-table
+28. views/TrsTable --- 封装el-table
+29. views/reWriteMessage --- 改写el-message(utils/reWriteMessage.js，main.js中引用)
+30. views/vxeTable --- vxeTable

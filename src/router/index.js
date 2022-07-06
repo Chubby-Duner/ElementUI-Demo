@@ -181,6 +181,16 @@ const routes = [
     component: () => import('../views/sortTable.vue')
   },
   {
+    path: '/exportExcel',
+    name: 'exportExcel',
+    component: () => import('../views/exportExcel.vue')
+  },
+  {
+    path: '/vxeTable',
+    name: 'vxeTable',
+    component: () => import('../views/vxeTable.vue')
+  },
+  {
     path: '*',
     component: () => import('../components/page404/index.vue')
   }
@@ -208,7 +218,7 @@ const router = new VueRouter({
         if (document.querySelector(to.hash)) {
           return position;
         }
-        // return false就不会回滚到页面顶部，减少用户多余的滚动操作
+        // return false就不会回滚到页面顶部，减少用户多余的滚动操作 
         return false;
       }
     }
